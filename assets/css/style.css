@@ -48,13 +48,13 @@ a {
 }
 
 #site-header a:hover {
-  color: #1F7A4D;
-  background-color: #EBFAF2;
+  color: #1f7a4d;
+  background-color: #ebfaf2;
   border-radius: 5px;
 }
 
 #site-header i {
-  color:  #1F7A4D;
+  color: #1f7a4d;
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
@@ -63,12 +63,11 @@ a {
 
 .bloom {
   font-size: 1.5rem;
-   font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
 #site-header h1 {
   margin: 0;
   font-size: 1.5rem;
-
 }
 
 #site-header nav ul {
@@ -81,6 +80,62 @@ a {
   width: 100%;
 }
 
+/*Hero section*/
+.hero {
+  min-height: 70vh;
+  background: linear-gradient(#1f7a4d);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  opacity: 0.9;
+}
+
+.hero h1 {
+  animation: fadeIn 0.8s ease-in-out;
+}
+.hero p {
+  animation: fadeIn 0.8s ease-out 0.3s both;
+}
+.hero .btn-start {
+  animation: fadeIn 0.8s ease-out 0.5s both;
+}
+
+.hero .btn-start {
+  background-color: #fff;
+  color: #1f7a4d;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*Keyframes*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* Risoluzione 768px */
 @media screen and (min-width: 768px) {
