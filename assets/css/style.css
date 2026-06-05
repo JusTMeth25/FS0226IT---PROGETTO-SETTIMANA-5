@@ -14,6 +14,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: #1a1a1a;
+  overflow-x: hidden;
 }
 
 img {
@@ -39,7 +40,25 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
+
+#site-header.scrolled {
+  background-color: #1a1a1a;
+}
+
+#site-header.scrolled a {
+  color: #ffffff;
+}
+
+#site-header.scrolled a:hover {
+  color: #1f7a4d;
+  background-color: #333333;
+}
+
+
 
 #site-header a {
   color: #555555;
