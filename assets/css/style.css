@@ -107,16 +107,14 @@ a {
 }
 
 .hero h1 {
-  animation: fadeIn 0.8s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
 }
-.hero p {
-  animation: fadeIn 0.8s ease-out 0.3s both;
-}
-.hero .btn-start {
-  animation: fadeIn 0.8s ease-out 0.5s both;
+.hero p, .hero .btn-start {
+  animation: fadeIn 1s ease-out 0.3s both;
 }
 
 .hero .btn-start {
+  display: inline-block;
   background-color: #fff;
   color: #1f7a4d;
   border: none;
@@ -124,7 +122,15 @@ a {
   border-radius: 30px;
   font-weight: bold;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
+
+.hero .btn-start:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+
 
 /* Cards section */
 .services {
@@ -187,15 +193,55 @@ a {
   border-width: 2px;
 }
 
+/*Footer*/
+#site-footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+}
+
+#site-footer i {
+  color: #1f7a4d;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 1.5rem;
+}
+
+#site-footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 1px;
+}
+
+
+#site-footer .social-icons i {
+  background-color: #2A2A2A;
+  border: 1px solid black;
+  border-radius: 50%;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#site-footer .social-icons i:hover {
+  background-color: #1f7a4d;
+  transform: translateY(-4px);
+}
+#site-footer p {
+  color: #838383;
+}
+
 /*Keyframes*/
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(30px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -205,19 +251,19 @@ a {
     flex-direction: row;
     justify-content: space-between;
   }
-}
 
-.services-container {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.card {
-  flex: 0 0 calc(50% - 12px);
-}
+  .services-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card {
+    flex: 0 0 calc(50% - 12px);
+  }
 
-.card:last-child {
-  flex: 0 0 100%;
+  .card:last-child {
+    flex: 0 0 100%;
+  }
 }
 
 /* Risoluzione 992px */
